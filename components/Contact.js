@@ -30,7 +30,7 @@ export default function Contact() {
 
   return (
     <section className="section contact-section" id="contact">
-      <SectionBackdrop src="/images/achievements-meadow.webp" />
+      <SectionBackdrop src="/images/hero-forest.webp" />
 
       <div className="container">
         <div className="section-header reveal-item">

@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="section hero-section" id="hero">
       <div className="hero-bg" aria-hidden="true">
         <Image
-          src="/images/hero-forest.webp"
+          src="/images/achievements-meadow.webp"
           alt=""
           fill
           priority
@@ -39,11 +39,9 @@ export default function Hero() {
           <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">
               <span>View my work</span>
-              <Icon name="arrowUpRight" className="btn-icon" />
             </a>
             <a href="#contact" className="btn btn-secondary">
               <span>Get in touch</span>
-              <Icon name="mail" className="btn-icon" />
             </a>
           </div>
         </div>

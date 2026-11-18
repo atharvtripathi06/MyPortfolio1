@@ -14,13 +14,13 @@
   --bg-inset:          rgba(240, 247, 242, 0.72);
   --bg-badge:          #E4F5E8;
 
-  --text-primary:      #16301F;
-  --text-secondary:    #41604A;
-  --text-muted:        #57705F;
+  --text-primary:      #000000;
+  --text-secondary:    #1a1a1a;
+  --text-muted:        #333333;
 
-  --accent-primary:    #23784B;
-  --accent-hover:      #1C6138;
-  --accent-soft:       rgba(35, 120, 75, 0.12);
+  --accent-primary:    #4ADE80;
+  --accent-hover:      #34D399;
+  --accent-soft:       rgba(74, 222, 128, 0.12);
 
   --border-subtle:     rgba(35, 120, 75, 0.20);
   --border-strong:     rgba(35, 120, 75, 0.42);
@@ -160,7 +160,15 @@ p {
   padding-top: calc(var(--section-py) + 96px);
 }
 
-.text-accent { color: var(--accent-primary); }
+.text-accent { 
+  color: var(--accent-primary); 
+  /* Stronger glow effect for the name - light green */
+  text-shadow: 
+    0 0 30px rgba(74, 222, 128, 0.8),
+    0 0 60px rgba(74, 222, 128, 0.6),
+    0 0 90px rgba(74, 222, 128, 0.4),
+    0 0 120px rgba(74, 222, 128, 0.2);
+}
 
 /* --------------------------------------------------------------------------
    3. Section backdrop photography
@@ -232,7 +240,8 @@ p {
   line-height: 1.22;
   letter-spacing: -0.03em;
   margin-bottom: 14px;
-  text-shadow: 0 1px 18px rgba(255, 255, 255, 0.85);
+  /* Subtle black glow for depth on light backgrounds */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Attractive heading for the OS Code SubCore designation.
@@ -265,7 +274,8 @@ p {
   font-size: 1.06rem;
   color: var(--text-secondary);
   line-height: 1.62;
-  text-shadow: 0 1px 14px rgba(255, 255, 255, 0.9);
+  /* Subtle black glow */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.08);
 }
 
 .mono-pill {
@@ -693,14 +703,8 @@ p {
 .hero-bg-veil {
   position: absolute;
   inset: 0;
-  /* Tint only behind the headline (top); zero at the bottom so the hero
-     photograph crossfades directly into the About photograph. */
-  background:
-    linear-gradient(180deg,
-      rgba(240, 247, 242, 0.20) 0%,
-      rgba(240, 247, 242, 0) 14%,
-      rgba(240, 247, 242, 0) 86%,
-      rgba(240, 247, 242, 0) 100%);
+  /* Completely transparent - hero photograph fully visible */
+  background: transparent;
 }
 
 /* The hero is the showcase frame — let its photograph read strongest. */
@@ -768,7 +772,8 @@ p {
   line-height: 1.14;
   letter-spacing: -0.035em;
   margin-bottom: 20px;
-  text-shadow: 0 1px 20px rgba(255, 255, 255, 0.85), 0 0 4px rgba(255, 255, 255, 0.9);
+  /* Subtle black glow */
+  text-shadow: 0 0 14px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .hero-tagline {
@@ -780,7 +785,8 @@ p {
   letter-spacing: -0.015em;
   line-height: 1.3;
   color: var(--text-secondary);
-  text-shadow: 0 1px 16px rgba(255, 255, 255, 0.75), 0 0 3px rgba(255, 255, 255, 0.85);
+  /* Subtle black glow */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .hero-subtext {
@@ -789,7 +795,8 @@ p {
   color: var(--text-secondary);
   max-width: 560px;
   margin-bottom: 32px;
-  text-shadow: 0 1px 14px rgba(255, 255, 255, 0.85);
+  /* Subtle black glow */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.08);
 }
 
 .hero-actions {
