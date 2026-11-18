@@ -35,9 +35,15 @@ portfolio/
 │   ├── Hero.js            # Greeting badge, headline, value prop & CTAs
 │   ├── About.js           # Bio & Bento cards (Skills, Education, Highlights)
 │   ├── Projects.js        # Featured AquaSense 2.0 showcase with core principle & links
-│   ├── Contact.js         # Clickable copy-email, LinkedIn/GitHub links & accessible form
+│   ├── Skills.js          # Skill group cards + "currently exploring" strip
+│   ├── Achievements.js    # Milestone cards with photographic backdrop
+│   ├── Contact.js         # Copy-email, LinkedIn/GitHub links & form-free "open to" card
+│   ├── Icons.js           # Single 24×24 stroke-icon set used across the site
+│   ├── SectionBackdrop.js # Full-bleed section photography layer
 │   ├── Footer.js          # Copyright & smooth back-to-top button
 │   └── ScrollReveal.js    # IntersectionObserver client hook for subtle scroll reveals
+├── data/
+│   └── portfolio.js       # Single source of truth for all portfolio content
 ├── jsconfig.json          # Path alias configuration (`@/*`)
 ├── next.config.mjs        # Next.js configuration
 ├── package.json           # Next.js & React dependencies
@@ -52,10 +58,10 @@ portfolio/
 2. **Hero Section:** Live status badge with subtle animated green pulsing dot, bold headline, and quick action buttons.
 3. **About & Bento Grid:** Two-column section highlighting Atharv's journey at Bangalore Institute of Technology, core skills (`C`, `Java`, `HTML`, `AI Prompting`, `Vibe Coding`), and achievements.
 4. **Flagship Project (AquaSense 2.0):** Data-driven smart irrigation & soil health optimization showcase card with core principle callout and direct links to the [Live App](https://aquasense-2-0.vercel.app/) and [GitHub](https://github.com/atharvtripathi06).
-5. **Interactive Contact Section:**
+5. **Form-free Contact Section:**
    - One-click copy email button for `atharvtripathi2118@gmail.com` with real-time confirmation.
    - Clean social links for GitHub and LinkedIn.
-   - Client-side validated form with focus rings (`#52796F`), animated submit button spinner, and an inline success confirmation card.
+   - An "What I'm open to" card listing collaboration interests, reply-time note and a direct `mailto:` call to action.
 6. **Smooth Scroll Reveals:** Polished fade-up transitions without jarring motions, respecting `prefers-reduced-motion`.
 
 ---

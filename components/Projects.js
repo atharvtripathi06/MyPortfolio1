@@ -1,113 +1,179 @@
+import Icon from './Icons';
+import SectionBackdrop from './SectionBackdrop';
+import { profile, project, projectNotes } from '@/data/portfolio';
+
 export default function Projects() {
   return (
     <section className="section projects-section" id="projects">
+      <SectionBackdrop src="/images/projects-river.webp" />
+
       <div className="container">
-        {/* Section Header */}
         <div className="section-header reveal-item">
-          <span className="section-tag">02 / FEATURED WORK</span>
+          <span className="section-tag">03 / Featured work</span>
           <h2 className="section-title">Built with purpose, powered by data.</h2>
           <p className="section-desc">
-            A spotlight on my flagship engineering project tackling real-world sustainability and agricultural efficiency.
+            A spotlight on my flagship engineering project tackling real-world sustainability and
+            agricultural efficiency.
           </p>
         </div>
 
-        {/* Featured Project Showcase Card */}
-        <div className="reveal-item">
-          <article className="project-featured-card">
-            <div className="project-top">
-              <div className="project-badge-wrap">
-                <span className="category-badge">Smart Agriculture</span>
-                <span className="featured-label">Featured Project</span>
-              </div>
-
-              <div className="project-links">
-                <a
-                  href="https://github.com/atharvtripathi06"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon-link"
-                  aria-label="View Atharv's GitHub Repository"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                </a>
-                <a
-                  href="https://aquasense-2-0.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon-link"
-                  aria-label="Launch AquaSense Live Demo"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
-                </a>
-              </div>
+        <article className="project-featured-card reveal-item">
+          <div className="project-top">
+            <div className="project-badge-wrap">
+              <span className="category-badge">{project.category}</span>
+              <span className="featured-label">Featured project</span>
             </div>
 
-            <h3 className="project-title">
-              <a href="https://aquasense-2-0.vercel.app/" target="_blank" rel="noopener noreferrer">
-                AquaSense 2.0 — Smart Irrigation &amp; Soil Health Optimization
-              </a>
-            </h3>
-
-            <p className="project-description">
-              AquaSense decides if, when, and how much to irrigate using live weather inputs, soil physics, crop growth stage metrics, and a trained machine learning model.
-            </p>
-
-            {/* Core Principle Quote / Highlight Box */}
-            <div className="project-principle">
-              <span className="project-principle-label">Core Principle</span>
-              <p>
-                &ldquo;Do not irrigate simply because it is time to irrigate. AquaSense evaluates root-zone moisture, crop stage, soil retention, forecast rainfall, and application efficiency before recommending a single drop.&rdquo;
-              </p>
-            </div>
-
-            {/* Tech Tags */}
-            <div className="project-tags">
-              <span className="mono-pill">Smart Agriculture</span>
-              <span className="mono-pill">Machine Learning</span>
-              <span className="mono-pill">Soil Physics</span>
-              <span className="mono-pill">Live Weather API</span>
-              <span className="mono-pill">Next.js</span>
-              <span className="mono-pill">Vercel</span>
-            </div>
-
-            <div className="project-cta-row">
+            <div className="project-links">
               <a
-                href="https://aquasense-2-0.vercel.app/"
+                href={profile.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary btn-sm"
+                className="icon-link"
+                aria-label="Atharv's GitHub profile"
               >
-                <span>Open Live Application</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
+                <Icon name="github" size={18} />
               </a>
               <a
-                href="https://github.com/atharvtripathi06"
+                href={profile.aquasense}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-secondary btn-sm"
+                className="icon-link"
+                aria-label="Launch the AquaSense live application"
               >
-                <span>GitHub Profile</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
+                <Icon name="external" size={18} />
               </a>
             </div>
-          </article>
+          </div>
+
+          <div className="project-layout">
+            <div className="project-main">
+              <h3 className="project-title">
+                <a href={profile.aquasense} target="_blank" rel="noopener noreferrer">
+                  {project.name} — {project.tagline}
+                </a>
+              </h3>
+
+              <p className="project-description">{project.description}</p>
+
+              <div className="project-flow">
+                {project.flow.map((step) => (
+                  <div className="flow-step" key={step.title}>
+                    <span className="flow-icon" aria-hidden="true">
+                      <Icon name={step.icon} size={18} />
+                    </span>
+                    <span className="flow-label">{step.label}</span>
+                    <strong className="flow-title">{step.title}</strong>
+                    <p className="flow-text">{step.text}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="project-principle">
+                <span className="principle-label">Core principle</span>
+                <p>&ldquo;{project.principle}&rdquo;</p>
+              </div>
+
+              <div className="project-tags">
+                {project.stack.map((tag) => (
+                  <span className="mono-pill" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="project-cta-row">
+                <a
+                  href={profile.aquasense}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary btn-sm"
+                >
+                  <span>Open live application</span>
+                  <Icon name="external" size={16} className="btn-icon" />
+                </a>
+                <a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary btn-sm"
+                >
+                  <span>GitHub profile</span>
+                  <Icon name="github" size={16} className="btn-icon" />
+                </a>
+              </div>
+            </div>
+
+            <aside className="project-aside">
+              <div className="preview-card">
+                <div className="preview-head">
+                  <span className="preview-mark" aria-hidden="true">
+                    <Icon name="droplet" size={20} />
+                  </span>
+                  <div className="preview-identity">
+                    <p className="preview-name">{project.name}</p>
+                    <p className="preview-sub">Irrigation decision engine</p>
+                  </div>
+                  <span className="preview-live">
+                    <span className="status-indicator" aria-hidden="true" />
+                    Live
+                  </span>
+                </div>
+
+                <ul className="preview-list">
+                  <li>
+                    <span className="preview-ico" aria-hidden="true">
+                      <Icon name="cloudRain" size={16} />
+                    </span>
+                    <span className="preview-item">Weather inputs</span>
+                    <em>Live data</em>
+                  </li>
+                  <li>
+                    <span className="preview-ico" aria-hidden="true">
+                      <Icon name="gauge" size={16} />
+                    </span>
+                    <span className="preview-item">Soil &amp; crop model</span>
+                    <em>ML</em>
+                  </li>
+                  <li>
+                    <span className="preview-ico" aria-hidden="true">
+                      <Icon name="droplet" size={16} />
+                    </span>
+                    <span className="preview-item">Irrigation advice</span>
+                    <em>Decision</em>
+                  </li>
+                </ul>
+
+                <dl className="preview-meta">
+                  {project.meta.map((row) => (
+                    <div key={row.label}>
+                      <dt>{row.label}</dt>
+                      <dd>{row.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </aside>
+          </div>
+        </article>
+
+        <div className="project-extras">
+          {projectNotes.map((note) => (
+            <article className="note-card reveal-item" key={note.title}>
+              <span className="card-icon" aria-hidden="true">
+                <Icon name={note.icon} />
+              </span>
+              <h3 className="note-title">{note.title}</h3>
+              <p className="note-text">{note.text}</p>
+              {note.link && (
+                <a href={note.link.href} className="link-arrow">
+                  <span>{note.link.label}</span>
+                  <Icon name="arrowRight" size={16} />
+                </a>
+              )}
+            </article>
+          ))}
         </div>
-
-        <p className="projects-note reveal-item">
-          More projects currently in active development. Stay tuned!
-        </p>
       </div>
     </section>
   );
